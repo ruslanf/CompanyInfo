@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/menuCompaniesList">
+    <fragment
+        android:id="@+id/menuCompaniesList"
+        android:name="studio.bz_soft.companyinfo.ui.companies.CompaniesFragment"
+        android:label="@string/fragment_companies_title"
+        tools:layout="@layout/fragment_companies" >
+        <action
+            android:id="@+id/action_companiesFragment_to_companyFragment"
+            app:destination="@id/companyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/companyFragment"
+        android:name="studio.bz_soft.companyinfo.ui.companies.company.CompanyFragment"
+        android:label="@string/fragment_company_info_title"
+        tools:layout="@layout/fragment_company_info" />
+    <fragment
+        android:id="@+id/menuMore"
+        android:name="studio.bz_soft.companyinfo.ui.more.MoreFragment"
+        android:label="@string/fragment_more_title"
+        tools:layout="@layout/fragment_more" />
+    <fragment
+        android:id="@+id/menuSettings"
+        android:name="studio.bz_soft.companyinfo.ui.settings.SettingsFragment"
+        android:label="@string/fragment_settings_title"
+        tools:layout="@layout/fragment_settings" />
+</navigation>

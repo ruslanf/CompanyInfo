@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/companyIV"
+                android:layout_width="@dimen/logo_image_size"
+                android:layout_height="@dimen/logo_image_size"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_no_image_light" />
+
+            <TextView
+                android:id="@+id/titleTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/companyIV"
+                app:layout_constraintStart_toEndOf="@+id/companyIV"
+                app:layout_constraintTop_toTopOf="@+id/companyIV"
+                tools:text="Title" />
+
+            <TextView
+                android:id="@+id/phoneTitleTV"
+                style="@style/CompanyInfoTitleStyle"
+                android:text="@string/fragment_company_info_phone"
+                app:layout_constraintStart_toStartOf="@+id/companyIV"
+                app:layout_constraintTop_toBottomOf="@+id/companyIV"
+                tools:text="Phone" />
+
+            <TextView
+                android:id="@+id/phoneTV"
+                style="@style/CompanyInfoTextStyle"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toEndOf="@+id/phoneTitleTV"
+                app:layout_constraintTop_toTopOf="@+id/phoneTitleTV"
+                app:layout_constraintBottom_toBottomOf="@+id/phoneTitleTV"
+                tools:text="+7 (999) 111-11-11" />
+
+            <TextView
+                android:id="@+id/webTitleTV"
+                style="@style/CompanyInfoTitleStyle"
+                android:text="@string/fragment_company_info_web"
+                app:layout_constraintTop_toBottomOf="@+id/phoneTitleTV"
+                app:layout_constraintStart_toStartOf="@+id/companyIV"
+                tools:text="www" />
+
+            <TextView
+                android:id="@+id/webTV"
+                style="@style/CompanyInfoTextStyle"
+                app:layout_constraintStart_toStartOf="@+id/phoneTV"
+                app:layout_constraintTop_toTopOf="@+id/webTitleTV"
+                app:layout_constraintBottom_toBottomOf="@+id/webTitleTV"
+                tools:text="www.company.com" />
+
+            <TextView
+                android:id="@+id/mapTV"
+                style="@style/CompanyInfoTitleStyle"
+                android:text="@string/fragment_company_info_map"
+                app:layout_constraintTop_toBottomOf="@+id/webTitleTV"
+                app:layout_constraintStart_toStartOf="@+id/companyIV" />
+
+            <TextView
+                android:id="@+id/descriptionTV"
+                style="@style/CompanyInfoTitleStyle"
+                android:layout_width="0dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mapTV" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

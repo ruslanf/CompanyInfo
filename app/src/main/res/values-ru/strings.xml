@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Информация о Компаниях</string>
+
+    <string name="main_menu_title_companies_list">Компании</string>
+    <string name="main_menu_title_more">Еще</string>
+    <string name="main_menu_title_settings">Настройки</string>
+
+    <string name="fragment_companies_title">Компании</string>
+
+    <string name="fragment_company_info_title">О компании</string>
+    <string name="fragment_company_info_phone">Телефон:</string>
+    <string name="fragment_company_info_map">Показать на карте</string>
+
+    <string name="fragment_more_title">Еще</string>
+    <string name="fragment_settings_title">Настройки</string>
+
+    <string name="companies_synchronize">Синхронизировать</string>
+
+    <string name="root_sync_message_error">Ошибка синхронизации</string>
+</resources>

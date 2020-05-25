@@ -1,0 +1,3 @@
+package studio.bz_soft.companyinfo.data.repository
+
+interface LocalStorageInterface
