@@ -5,16 +5,7 @@ import androidx.room.*
 import studio.bz_soft.companyinfo.data.models.db.Company
 
 @Dao
-interface CompanyDao {
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insert(company: Company)
-
-    @Update
-    suspend fun update(company: Company)
-
-    @Delete
-    suspend fun delete(company: Company)
-
+interface CompanyDao : BaseDao<Company> {
     @Query("Select * from company")
     fun getAllFromCompany(): LiveData<List<Company>>
 
