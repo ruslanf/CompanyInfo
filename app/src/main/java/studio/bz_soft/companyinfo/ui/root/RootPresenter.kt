@@ -51,16 +51,19 @@ class RootPresenter(
                             news.forEach { listCompanies = controller.getRecords(it.id!!) }
                         }
                         records.await()
-                        val db = async(SupervisorJob(job) + Dispatchers.IO) {
-                            if (listCompanies.isEmpty()) {
+                        if (listCompanies.isEmpty()) {
+                            val dbInsert = async(SupervisorJob(job) + Dispatchers.IO) {
                                 news.forEach {
                                     controller.insertCompanies(Companies(companyId = it.id!!, name = it.name!!, img = it.img!!))
                                 }
-                            } else {
+                            }
+                            dbInsert.await()
+                        } else {
+                            val dbUpdate = async(SupervisorJob(job) + Dispatchers.IO) {
                                 listCompanies.forEach { controller.insertCompanies(it) }
                             }
+                            dbUpdate.await()
                         }
-                        db.await()
                     }
                 }
             }
